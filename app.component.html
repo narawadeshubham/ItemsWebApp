@@ -1,0 +1,24 @@
+<body data-spy="scroll" data-target=".navbar" data-offset="400">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <i style="color: white;" class="bi bi-list"></i>
+                <a class="navbar-brand" style="margin-left: 25px;" href="home">Shrine</a>
+            </div>
+            <div style="color: white;" class=" navbar-right">
+                <i style="margin-left: -95px;" class="bi bi-search"></i>
+                <i style="margin-left: 35px;" class="bi bi-sliders2"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="box-container">
+        <div class="box" *ngFor="let data of jsonData">
+            <img style="height: 181px;width: 181px;" [src]="data.url" loading="lazy">
+            <div style="margin-top: 15px;" >
+                <p><b>{{data.itemName}}</b></p>
+                <p style="margin-top: -5px;">${{data.itemPrice}}</p>
+            </div>
+        </div>
+    </div>
+</body>
